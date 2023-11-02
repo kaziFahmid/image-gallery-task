@@ -32,6 +32,7 @@ const Header = ({
     setItems([]); // Clear the 'items' state after deletion
   };
 
+  // Delete all images function
   const handleDeleteSelectedAll = () => {
     // Remove selected items from the 'pictures' array
 
