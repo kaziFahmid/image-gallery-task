@@ -55,21 +55,8 @@ const MainBody = ({ setItems, items, pictures, setPictures, isAllChecked }) => {
         {pictures.map((data, index) => (
           <div
           // data- aos animation added for each divs by index
-            data-aos={
-              (index === 0 && "fade-right") ||
-              (index === 1 && "fade-down") ||
-              (index === 2 && "fade-up") ||
-              (index === 3 && "fade-down") ||
-              (index === 4 && "fade-up") ||
-              (index === 5 && "fade-up") ||
-              (index === 6 && "fade-up") ||
-              (index === 7 && "fade-down") ||
-              (index === 8 && "fade-up") ||
-              (index === 9 && "fade-down") ||
-              (index === 10 && "fade-down") ||
-              (index === 10 && "fade-up") ||
-              (index === 11 && "fade-left")
-            }
+            data-aos="fade-right"
+            
             className={` cursor-pointer border relative rounded-md  border-slate-400 ${
               index === 0 ? "lg:col-span-2  sm:row-span-2 lg:row-span-2 " : ""
             } relative group `}
