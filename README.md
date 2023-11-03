@@ -8,6 +8,14 @@ Inside the project's "Component" folder, there are only three components:
 1.Header
 2.ImageGallery
 3.MainBody
+
+
+
+<!-- Live Link -->
+https://euphonious-zuccutto-3c73bd.netlify.app/
+
+<!-- Github Link -->
+https://github.com/kaziFahmid/image-gallery-task
 <!-- Component explanation -->
 
 1.ImageGallery Component:

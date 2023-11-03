@@ -35,12 +35,29 @@ const Header = ({
   // Delete all images function
   const handleDeleteSelectedAll = () => {
     // Remove selected items from the 'pictures' array
-
-    setPictures([]);
-    // Clear the 'items' state after deletion
-    setItems([]);
-    setIsAllChecked(false);
-    Swal.fire("Good job!", "Deleted Successfully", "success");
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "Do you really want to delete all files",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setPictures([]);
+        // Clear the 'items' state after deletion
+        setItems([]);
+        setIsAllChecked(false);
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
+   
+  
   };
 
   const allSelected = items.length === pictures.length;
