@@ -43,6 +43,7 @@ const ImageGallery = () => {
   return (
     <>
       <div
+      data-aos="fade-down"
         id="image-box"
         className="bg-white pb-7  max-w-6xl mx-auto mt-2 rounded-lg"
       >

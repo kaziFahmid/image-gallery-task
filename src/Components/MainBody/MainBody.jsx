@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const MainBody = ({ setItems, items, pictures, setPictures, isAllChecked }) => {
-  console.log(items);
   const [draggingItem, setDraggingItem] = useState(null);
   const [isChecked, setIsChecked] = useState(false);
   // drag start function start
@@ -10,7 +9,7 @@ const MainBody = ({ setItems, items, pictures, setPictures, isAllChecked }) => {
   };
   // drag start function end
 
-    // drag Over function start
+  // drag Over function start
   const handleDragOver = (e, item) => {
     if (draggingItem === null) return;
 
@@ -28,13 +27,13 @@ const MainBody = ({ setItems, items, pictures, setPictures, isAllChecked }) => {
       setPictures(updatedPictures);
     }
   };
-    // drag Over function end
+  // drag Over function end
 
-        // drag end function start
+  // drag end function start
   const handleDragEnd = () => {
     setDraggingItem(null);
   };
-          // drag end function end
+  // drag end function end
 
   const handleSelect = (value, data) => {
     if (value) {
@@ -51,12 +50,9 @@ const MainBody = ({ setItems, items, pictures, setPictures, isAllChecked }) => {
       {/* Grid layout */}
 
       <div className=" mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-       {/* pictures map start */}
+        {/* pictures map start */}
         {pictures.map((data, index) => (
           <div
-          // data- aos animation added for each divs by index
-            data-aos="fade-right"
-            
             className={` cursor-pointer border relative rounded-md  border-slate-400 ${
               index === 0 ? "lg:col-span-2  sm:row-span-2 lg:row-span-2 " : ""
             } relative group `}
