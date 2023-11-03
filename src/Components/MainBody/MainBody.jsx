@@ -49,7 +49,7 @@ const MainBody = ({ setItems, items, pictures, setPictures, isAllChecked }) => {
     <div className="mt-2 px-5 ">
       {/* Grid layout */}
 
-      <div className=" mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+      <div className=" mt-5 grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
         {/* pictures map start */}
         {pictures.map((data, index) => (
           <div
@@ -64,7 +64,7 @@ const MainBody = ({ setItems, items, pictures, setPictures, isAllChecked }) => {
           >
             <img
               src={data.pic}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain rounded-md"
               alt={`Image ${data.id}`}
             />
 
@@ -113,6 +113,18 @@ const MainBody = ({ setItems, items, pictures, setPictures, isAllChecked }) => {
                 )}
           </div>
         ))}
+{pictures.length===0?"":   <div
+       className="outline-dashed outline-2 h-[348px] lg:h-full lg:col-span-1 row-span-6  sm:row-span-2 lg:row-span-1 flex justify-center items-center cursor-pointer border relative rounded-md border-slate-400"
+        >
+        <div className="text-center ">
+          <img src="https://i.ibb.co/6RFk1Jp/add-image-128.png" className="h-8 mx-auto"/>
+<h5 className="font-bold">Add Image</h5>
+        </div>
+       
+
+        
+        </div>}
+     
         {/* pictures map End */}
       </div>
     </div>
