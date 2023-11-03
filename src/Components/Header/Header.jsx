@@ -71,7 +71,7 @@ const Header = ({
           ) : (
             <input
               type="checkbox"
-              checked={pictures.length === 0 ? false : allSelected}
+              checked={pictures.length === 0 ? false : allSelected||items.length>0}
               onChange={handleToggleSelectAll}
               className="cursor-pointer form-checkbox h-5 w-5 text-slate-400"
             />
